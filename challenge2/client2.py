@@ -3,20 +3,14 @@ import socket
 from base64 import b64decode
 from random import randrange
 
-
-def randnum(number: int) -> str:
-    if number < 10:
-        return f"0{str(number)}"
-    else:
-        return str(number)
-
+from util.util import double_digits_from_randnum
 
 while (True):
     HOST = 'netsec.net.in.tum.de'
     PORT = 20002
 
     username = "root"
-    password = f"Password{randnum(randrange(0, 100))}"
+    password = f"Password{double_digits_from_randnum(randrange(0, 100))}"
     credentials = username + "," + password
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
