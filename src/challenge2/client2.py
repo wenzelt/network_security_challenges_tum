@@ -3,7 +3,7 @@ import socket
 from base64 import b64decode
 from random import randrange
 
-from src.util.util import double_digits_from_randnum
+from src.util.helpers import double_digits_from_randnum
 
 while True:
     HOST = "netsec.net.in.tum.de"
