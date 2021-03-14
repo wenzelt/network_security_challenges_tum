@@ -24,3 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: ricardochaves/python-lint@v1.3.0
+        with:
+          use-mypy: false
+          extra-mypy-options: ""
+
