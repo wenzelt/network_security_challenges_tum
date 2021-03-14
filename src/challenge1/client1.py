@@ -3,7 +3,7 @@ challenge1 to receive exercises
 """
 
 # pylint:disable=R0801
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 import socket
 from base64 import b64decode
 

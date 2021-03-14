@@ -2,9 +2,9 @@
 Collection of helper functions over the project
 """
 
-import sys
 import ast
 import operator as op
+import sys
 
 # supported operators
 operators = {
@@ -45,10 +45,12 @@ def eval_(node):
     :param node:
     :return:
     """
+
     if isinstance(node, ast.Num):  # <number>
         return_value = node.n
     elif isinstance(node, ast.BinOp):  # <left> <operator> <right>
-        return_value = operators[type(node.op)](eval_(node.left), eval_(node.right))
+        nodes = eval_(node.left), eval_(node.right)
+        return_value = operators[type(node.op)](nodes)
     elif isinstance(node, ast.UnaryOp):  # <operator> <operand> e.g., -1
         return_value = operators[type(node.op)](eval_(node.operand))
     else:
