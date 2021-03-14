@@ -1,8 +1,5 @@
 import sys
 
-import pylint
-from pylint.lint import Run
-
 
 def double_digits_from_randnum(number: int) -> str:
     if number < 10:
