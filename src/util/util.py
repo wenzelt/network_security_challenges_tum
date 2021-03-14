@@ -35,4 +35,3 @@ def update_progress(progress):
     )
     sys.stdout.write(text)
     sys.stdout.flush()
-
