@@ -1,7 +1,6 @@
 import sys
 
 import pylint
-import task as task
 from pylint.lint import Run
 
 
@@ -37,9 +36,3 @@ def update_progress(progress):
     sys.stdout.write(text)
     sys.stdout.flush()
 
-
-def run_pylint():
-    pylint.lint.Run(["--errors-only", "src/"])
-
-
-run_pylint()
