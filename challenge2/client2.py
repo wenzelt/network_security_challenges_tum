@@ -29,11 +29,11 @@ while (True):
     sf.flush()
 
     data = sf.readline().rstrip('\n')
-    print("From Server: `{}'".format(data))
+    #print("From Server: `{}'".format(data))
 
-    data = sf.readline().rstrip('\n')
-    print("From Server: received {} bytes".format(len(data)))
-
+    #data = sf.readline().rstrip('\n')
+    #print("From Server: received {} bytes".format(len(data)))
+    print(".")
     data = b64decode(data.encode())
 
     pdf_hdr = b'%PDF-1.5'
@@ -43,6 +43,7 @@ while (True):
         f = open('ex2.pdf', 'wb')
         f.write(data)
         f.flush()
+        break
 
     sf.close()
     s.close()
