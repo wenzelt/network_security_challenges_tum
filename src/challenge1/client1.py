@@ -1,4 +1,9 @@
-#!/usr/bin/env python3
+"""
+challenge1 to receive exercises
+"""
+
+# pylint:disable=R0801
+# !/usr/bin/env python3
 import socket
 from base64 import b64decode
 
@@ -36,9 +41,9 @@ print("From Server: received {} bytes".format(len(data)))
 
 data = b64decode(data)
 
-pdf_hdr = b"%PDF-1.5"
+PDF_HDR = b"%PDF-1.5"
 
-if len(data) >= len(pdf_hdr) and data[: len(pdf_hdr)] == pdf_hdr:
+if len(data) >= len(PDF_HDR) and data[: len(PDF_HDR)] == PDF_HDR:
     print("Looks like we got a PDF!")
     f = open("ex.pdf", "wb")
     f.write(data)
