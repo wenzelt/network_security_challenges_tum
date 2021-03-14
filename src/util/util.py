@@ -9,9 +9,9 @@ def double_digits_from_randnum(number: int) -> str:
 
 
 # update_progress() : Displays or updates a console progress bar
-## Accepts a float between 0 and 1. Any int will be converted to a float.
-## A value under 0 represents a 'halt'.
-## A value at 1 or bigger represents 100%
+# Accepts a float between 0 and 1. Any int will be converted to a float.
+# A value under 0 represents a 'halt'.
+# A value at 1 or bigger represents 100%
 def update_progress(progress):
     barLength = 10  # Modify this to change the length of the progress bar
     status = ""
